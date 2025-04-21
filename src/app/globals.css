@@ -41,3 +41,15 @@ body {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+@media print {
+  @page {
+    margin: 1cm;
+  }
+  body{
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  nav, footer, .print-hide {
+    display: none !important
+  }
+}
